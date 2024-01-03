@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Webite Fitness & Gym</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- fb, insta and google icon stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-...your-sha-value..." crossorigin="anonymous" />
+
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<span id="blue">Max Health</span>
+				<br class="mobile-only">
+				Unisex Fitness
+			</div>
+			<div class="menu">
+				<a href="#">Home</a>
+				<a href="#about">About</a>
+				<a href="#services">Services</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#contact">Contact</a>
+			</div>
+			<div class="icon">
+				<a href="https://www.facebook.com/profile.php?id=61550520704695">
+					<i class="fab fa-facebook-square fa-2x"></i>
+				</a>
+				<a href="https://www.instagram.com/">
+					<i class="fab fa-instagram fa-2x"></i>
+				</a>
+				<a href="https://g.co/kgs/maQNRW">
+					<i class="fab fa-google fa-2x"></i>
+				</a>
+			</div>
+			</div>
+			<div id="hamburger-icon">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="left">
+				<!-- banner image goes here -->
+			</div>
+			<div class="right">
+				<h1>Yesterday you said tomorrow</h1>
+			</div>
+		</div>
+	</header>
+
+	<section id="about">
+		<div class="about-row">
+			<div class="about-left-col">
+				<h1 id="white"> About <span id="blue">us</span></h1>
+				<p id="p-title">Why Choose Max Health Unisex Fitness?</p>
+
+				<p>✓ State-of-the-Art Facilities: Equipped with cutting-edge machines and facilities, we provide a
+					dynamic and invigorating environment for every fitness enthusiast.</p>
+
+				<p>✓ Expert Trainers: Our certified trainers bring expertise, motivation, and personalized attention
+					to
+					each member, ensuring you reach your fitness goals efficiently and safely.</p>
+
+				<p id="additionalContent">✓ Diverse Classes: From high-energy group classes to personalized one-on-one
+					training sessions,
+					we
+					offer a range of fitness options tailored to diverse preferences and fitness levels.<br><br>
+
+				✓ Community Atmosphere: Max Health Unisex Fitness is more than a gym; it's a
+					supportive
+					community.
+					Connect with like-minded individuals, share your achievements, and celebrate each other's
+					success.<br><br><br>
+
+
+				Our Commitment to You<br><br>
+
+				We understand that everyone's fitness journey is unique. That's why Max Health<br><br>
+					Unisex Fitness is
+					committed to providing a welcoming space where you can pursue your goals at your pace. Whether
+					you're a seasoned athlete or a beginner, our inclusive approach ensures that everyone feels
+					valued
+					and supported.<br><br>
+
+				Embark on a fitness journey that goes beyond exercise. At Max Health Unisex
+					Fitness, we're not
+					just
+					shaping bodies; we're transforming lives. Join us today, and let's achieve your fitness
+					aspirations
+					together.
+				</p>
+				<button id="readMoreBtn" onclick="toggleReadMore()">Read More</button>
+			</div>
+			<div class="about-right-col">
+				<img src="images/img1.jpg">
+			</div>
+		</div>
+	</section>
+
+	<section id="pricing">
+		<div class="pricing-intro">
+			<p>Check out our pricing</p>
+		</div>
+		<div class="pricing-grid">
+			<div class="pricing-card">
+				<h2>Basic</h2>
+				<p class="price">600 INR/month</p>
+				<ul>
+					<li>Basic training sessions</li>
+					<li>Basic diet program</li>
+				</ul>
+			</div>
+			<div class="pricing-card">
+				<h2>Premium</h2>
+				<p class="price">3500 INR/month</p>
+				<ul>
+					<li>Personalized training sessions</li>
+					<li>Customised diet plan</li>
+					<li>Customised supplementation plan</li>
+				</ul>
+			</div>
+			<div class="pricing-card">
+				<h2>Boxing</h2>
+				<p class="price">1000 INR/month</p>
+				<ul>
+					<li>Twelve classes in a month</li>
+					<li>Customised training session</li>
+					<li>Customised diet plan</li>
+				</ul>
+			</div>
+			<div class="pricing-card">
+				<h2>Custom</h2>
+				<p class="price">Contact us for pricing</p>
+				<ul>
+					<li>Personalized plans</li>
+					<li>Specialized programs</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="gym-info">
+		<div class="gym-info-container">
+			<div class="gym-info-item">
+				<i class="fas fa-expand"></i>
+				<p id="squareFootage">0</p>
+				<h3>Square footage of space</h3>
+			</div>
+			<div class="gym-info-item">
+				<i class="fas fa-users"></i>
+				<p id="members">0</p>
+				<h3>Happy members and counting</h3>
+			</div>
+			<div class="gym-info-item">
+				<i class="fas fa-calendar-alt"></i>
+				<p id="daysAWeek">0</p>
+				<h3>Days a week</h3>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section id="signup">
+		<div class="container">
+			<div class="signup-row">
+				<div class="signup-left-col">
+					<img src="images/img2.png">
+				</div>
+				<div class="signup-right-col">
+					<h1><span id="black"> BEING </span><span id="blue">BODY</span></h1>
+					<h2>BUILDER</h2>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<section id="services">
+		<div class="services-info">
+			<h1><span id="white">Our </span><span id="blue">Services</span></h1>
+			<p><span id="white">What we provide<span id="white"></span></p>
+		</div>
+		<div class="services-row">
+			<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>Weight Training</h2>
+				<p> At Max Health Unisex Fitness, we recognize the pivotal role that weight training plays in achieving
+					a holistic
+					and well-rounded fitness journey. Whether you're aiming to build strength, sculpt your physique, or
+					enhance overall health, our weight training programs are tailored to meet your unique goals. </p>
+			</div>
+
+			<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>Cardiovascular Training</h2>
+				<p> At Max Health Unisex Fitness, we recognize that cardiovascular exercise is a cornerstone of a
+					holistic fitness
+					routine. Our cardio training programs are designed to elevate your heart rate, boost endurance, and
+					enhance overall cardiovascular health. </p>
+			</div>
+
+			<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>Boxing</h2>
+				<p> Welcome to the ultimate destination for boxing enthusiasts at Max Health Unisex Fitness. Discover
+					the
+					invigorating world of boxing training and experience a workout that goes beyond the ordinary.
+					Whether you're a seasoned pro or stepping into the ring for the first time, our boxing program is
+					designed to elevate your fitness and unleash your inner warrior. </p>
+			</div>
+
+			<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>Massage</h2>
+				<p> At Max Health Unisex Fitness, we understand that a holistic approach to fitness extends beyond
+					vigorous
+					workouts. That's why we're proud to offer professional massage therapy services designed to enhance
+					your overall well-being. Our experienced massage therapists are dedicated to providing
+					personalized care. They specialize in various massage techniques, ensuring that each session is
+					tailored to meet your specific needs and preferences. </p>
+			</div>
+
+			<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>Sports Medicine And Nutrition </h2>
+				<p> Elevate your fitness journey to new heights by fueling your body with the right nutrition. At Max
+					Health Unisex Fitness, we understand that achieving your fitness goals goes hand in hand with a
+					well-balanced and tailored diet. Our Sports Diet Consultation services are designed to empower you
+					with the
+					knowledge and guidance needed to optimize your nutrition and maximize your performance. </p>
+			</div>
+
+			<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>Personal Training</h2>
+				<p> At Max Health Unisex Fitness, we believe that personal training is the key to unlocking your full
+					fitness
+					potential. Our personalized approach goes beyond generic workout routines, ensuring that every
+					session is tailored to meet your individual goals, preferences, and fitness level. </p>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- <section id="members">
+		<div class="services-info">
+			<h1>Our <span id="blue">Members</span></h1>
+			<p>What our gym member says</p>
+		</div>
+
+
+		<div class="member-card">
+
+
+			<img src="images/member.png">
+			<p>
+				From Rajasthan,doing gym is good for healthy life. it helps our body to fit. it release stress from our
+				mind.From Rajasthan,doing gym is good for healthy life. it helps our body to fit. it release stress from
+				our mind.
+			</p>
+			<h2>* Maria Sharapova, Gym Client</h2>
+
+			<img src="images/icon.png">
+		</div>
+	</section> -->
+
+	<!-- <section id="work">
+		<div class="services-info">
+			<h1><span id="white">Our </span><span id="blue">Works</span></h1>
+			<p><span id="white">What we Provide</span></p>
+		</div>
+		<div class="services-row">
+			<div class="work-box">
+				<img src="images/ex1.jpg">
+			</div>
+			<div class="work-box">
+				<img src="images/ex2.jpg">
+			</div>
+			<div class="work-box">
+				<img src="images/ex3.jpg">
+			</div>
+			<div class="work-box">
+				<img src="images/ex4.jpg">
+			</div>
+			<div class="work-box">
+				<img src="images/ex5.jpg">
+			</div>
+			<div class="work-box">
+				<img src="images/ex6.jpg">
+			</div>
+		</div>
+	</section> -->
+
+	<section id="contact">
+		<div class="services-info">
+			<h1><span id="white">Get in </span><span id="blue">touch</span></h1>
+			<p><span id="white"> We are Available</span></p>
+		</div>
+
+		<div class="contact-row">
+			<div class="contact-right-col">
+				<h1><i class="fa fa-envelope" aria-hidden="true"></i> E-mail</h1>
+				<p>Email: <a href="supriyon538@gmail.com"><span  id="white">supriyon538@gmail.com </span></a></p>
+				<br>
+				<h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1>
+				<p>8420266828</p>
+				<br>
+				<h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Address</h1>
+				<p> AA/12 BAGUIHATI ( BICHITRA MORE ) , DURGA BARI, Baguiati, Kolkata, West Bengal 700059 </p>
+				<!-- Show on Mobile View -->
+				<h1 id="alsoContact"><i class="fa fa-envelope" aria-hidden="true"></i> Also, contact us on</h1>
+				<p class="social-icons-mobile">
+					<a href="https://www.facebook.com/profile.php?id=61550520704695" title="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+					<a href="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+					<a href="https://g.co/kgs/maQNRW" title="Google Business"><i class="fab fa-google fa-2x"></i></a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="footer">
+		<h1>Max Health<span id="blue">Unisex Fitness</span></h1>
+		<div class="icon">
+			<a href="https://www.facebook.com/profile.php?id=61550520704695">
+				<i class="fab fa-facebook-square fa-2x"></i>
+			</a>
+			<a href="https://www.instagram.com/">
+				<i class="fab fa-instagram fa-2x"></i>
+			</a>
+			<a href="https://g.co/kgs/maQNRW">
+				<i class="fab fa-google fa-2x"></i>
+			</a>
+		</div>
+	</section>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>

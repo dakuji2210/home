@@ -1,0 +1,863 @@
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+	background: black;
+	/* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%); */
+}
+
+nav {
+	position: fixed;
+	top: 0;
+    left: 0;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.7); /* Set the background color with transparency */
+	padding: 15px;
+    z-index: 1000; /* Ensure the navigation bar is above other elements */
+}
+
+.logo {
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	color: white;
+}
+#hamburger-icon .bar {
+    background-color: white;
+}
+@media only screen and (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 768px) {
+    .logo {
+        font-size: 22px; /* Adjust the font size as needed for small screens */
+        text-align: center; /* Center the text on small screens */
+        padding: 10px; /* Add padding to give space around the logo */
+    }
+	.logo span#blue {
+        font-size: 30px; /* Adjust the font size for Max Health */
+    }
+    .menu {
+        display: none; /* Hide the menu on small screens initially */
+    }
+	.mobile-only {
+        display: block; /* Hide the line break for screens wider than 768 pixels */
+    }
+    #hamburger-icon {
+        display: block; /* Show the hamburger icon on small screens */
+    }
+}
+
+.fab.fa-facebook-square {
+	color: #3b5998;
+	padding: 5px;
+	/* Change to the desired color for Facebook */
+}
+
+.fab.fa-instagram {
+	color: #bc2a8d;
+	padding: 5px;
+	/* Change to the desired color for Instagram */
+}
+
+.fab.fa-google {
+	color: #4285F4;
+	padding: 5px;
+	/* Change to the desired color for Google */
+}
+
+
+#blue {
+	color: #74b9ff;
+}
+
+#white {
+	color: white;
+}
+
+#black {
+	color: #000000;
+}
+
+.menu {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+}
+
+.menu a:first-child {
+	border-bottom: 2px solid #74b9ff;
+}
+
+/* Show the hamburger icon for small screens */
+#hamburger-icon {
+	display: none;
+	cursor: pointer;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 2;
+}
+
+/* Individual bars of the hamburger icon */
+.bar {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 5px 0;
+	transition: background-color 0.3s ease-in-out;
+	/* Added transition for color change */
+}
+
+@media only screen and (max-width: 768px) {
+	.menu {
+		display: none;
+		/* Hide the menu by default on small screens */
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		top: 0px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(51, 51, 51, 0.8);
+		z-index: 1;
+	}
+
+	.menu.show {
+		display: flex;
+		/* Show the menu when 'show' class is added */
+	}
+
+	.menu a {
+		padding: 15px;
+		text-align: center;
+	}
+
+	#hamburger-icon {
+		display: block;
+		/* Show the hamburger icon for small screens */
+	}
+
+	.bar {
+		transition: transform 0.3s ease-in-out;
+		/* Added transition for sliding effect */
+	}
+
+	.bar:nth-child(1).active {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+
+	.bar:nth-child(2).active {
+		opacity: 0;
+	}
+
+	.bar:nth-child(3).active {
+		transform: rotate(45deg) translate(-5px, -6px);
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+.menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.menu a:first-child {
+	border-bottom: 2px solid #74b9ff;
+}
+
+.icon {
+	display: flex;
+}
+
+/* Media query for screens with a maximum width of 768 pixels (adjust as needed) */
+@media only screen and (max-width: 768px) {
+    .icon {
+        display: none; /* Hide the icons in mobile view */
+    }
+}
+
+.container {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white; 
+	z-index: 1; /* Ensure the content is above the navigation bar */
+}
+
+.left {
+	max-width: 100%;
+	/* Ensures the image is responsive and won't overflow */
+	width: 100%;
+	height: 100vh;
+	display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+	background-image: url('images/desktop-banner.jpg');
+    background-size: cover;
+	background-position: center;
+}
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media only screen and (max-width: 768px) {
+    .left {
+		height: 100vh; /* Set height to 100% of the viewport height on mobile */
+        background-image: url('images/mobile-banner.jpg');
+		background-size: cover;
+    }
+}
+
+.right {
+	position: absolute;
+    top: 50%; /* Adjust this value to vertically center the text */
+    left: 50%; /* Adjust this value to horizontally center the text */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+	flex-basis: 100%;
+    max-width: 100%;
+}
+
+.right h1 {
+	color: #74b9ff;
+	font-size: 80px;
+	opacity: 0;
+	animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.right p {
+	font-size: 25px;
+	margin: 10px 0px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+	
+	.right {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+
+	.right p,
+	.right h1 {
+		font-size: 30px;
+	}
+}
+
+#about {
+	padding: 100px 0px;
+	background-color: rgb(34, 34, 34);
+}
+
+.about-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.about-left-col {
+	padding-left: 20px;
+	flex-basis: 50%;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-in {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.about-right-col {
+	flex-basis: 50%;
+	text-align: center;
+}
+
+.about-right-col img {
+	width: 80%;
+}
+
+.about-left-col {
+	max-width: 400px;
+	margin: auto;
+	max-width: 400px;
+    margin: auto;
+    position: relative;
+    overflow: hidden; /* Hide overflow content */
+}
+
+
+.about-left-col h1 {
+	font-size: 50px;
+}
+
+.about-left-col p {
+	font-size: 20px;
+	text-align: justify;
+	margin: 15px 0px;
+	color: whitesmoke;
+}
+.about-left-col p#additionalContent {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.about-left-col p#additionalContent.show {
+    opacity: 1;
+    max-height: 1000px; /* Adjust this value based on your content height */
+}
+
+#readMoreBtn {
+    color: whitesmoke;
+    /* Add any additional styling as needed */
+}
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media only screen and (max-width: 768px) {
+    .about-row {
+        flex-direction: column-reverse; /* Reverse the order for mobile view */
+    }
+
+    .about-left-col,
+    .about-right-col {
+        flex-basis: 100%; /* Take full width in mobile view */
+    }
+}
+
+#pricing {
+	background-color: rgb(34, 34, 34);
+	text-align: center;
+    padding: 50px 0;
+	color:  whitesmoke;
+}
+
+.pricing-intro {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 50px;
+}
+
+.pricing-intro p {
+	font-weight: bold;
+    font-size: 50px;
+    color: #74b9ff;
+    margin: 0; /* Remove default margin to ensure proper centering */
+	padding-bottom: 40px;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    max-width: 350px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+	border: 2px solid #74b9ff;
+}
+
+button:hover {
+    background-color:  rgba(162, 227, 253, 0.76);
+}
+
+@media only screen and (max-width: 768px) {
+
+	.pricing-intro p {
+		font-size: 2.5em;
+	}
+
+}
+
+#gym-info {
+    background-color: rgb(34, 34, 34);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.gym-info-container {
+    display: flex;
+    justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.gym-info-item {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+	flex-basis: 30%;
+}
+
+.gym-info-item i {
+    font-size: 70px; /* Adjust the icon size as needed */
+	color: #74b9ff;
+    margin-bottom: 10px; /* Add spacing between the icon and text */
+}
+
+.gym-info-item h3 {
+    font-size: 14px; /* Adjust the heading size */
+    color: whitesmoke;
+    margin: 5px 0; /* Adjust the top and bottom margin */
+}
+
+.gym-info-item p {
+    font-size: 70px; /* Adjust the paragraph size */
+    color: whitesmoke;
+    margin: 5px 0; /* Adjust the top and bottom margin */
+}
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media only screen and (max-width: 768px) {
+    .gym-info-container {
+        flex-direction: column; /* Stack items vertically in mobile view */
+		align-items: center; /* Center items horizontally */
+    }
+
+    .gym-info-item {
+        flex-basis: 100%; /* Take full width in mobile view */
+    }
+}
+
+/* #signup {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: rgba(0, 0, 0, 0.03);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%);
+}
+
+.signup-row {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.signup-left-col {
+	flex-basis: 50%;
+	text-align: center;
+}
+
+.signup-left-col img {
+	width: 60%;
+	max-width: 100%;
+}
+
+.signup-right-col {
+	flex-basis: 50%;
+	text-align: center;
+	opacity: 0;
+	animation: heartbeat 1s infinite;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.heartbeat-animation {
+	opacity: 1;
+}
+
+@keyframes heartbeat {
+
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+.signup-right-col h1 {
+	font-size: 90px;
+}
+
+.signup-right-col h2 {
+	font-size: 45px;
+	letter-spacing: 60px;
+	color: rgba(0, 0, 0, 0.3);
+	margin: 10px 0px;
+} */
+/* 
+@media only screen and (max-width: 768px) {
+	#signup {
+		clip-path: none; /* Remove clip-path for simplicity on small screens */
+	/* }
+
+	.signup-left-col img {
+		width: 100%; /* Make the image take full width on small screens */
+	/* }
+
+	.signup-right-col h1{
+		font-size: 1.5em; /* Further reduce font size for smaller screens */
+	/* }
+
+	.signup-right-col h2 {
+		font-size: 1.2em; 
+		letter-spacing: normal;
+	}
+}  */
+
+
+#services {
+	padding: 50px 0px;
+	background-color: rgb(34, 34, 34);
+	color: whitesmoke;
+}
+
+.services-info {
+	text-align: center;
+}
+
+.services-info h1 {
+	font-size: 50px;
+}
+
+.services-info p {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.services-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: minmax(200px, auto);
+	grid-gap: 5em;
+	justify-content: center;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.services-box {
+	box-shadow: 2px 3px 5px grey;
+	padding: 10px;
+	text-align: center;
+	background-color: rgb(34, 34, 34);
+	border-radius: 10px;
+	border: 1px solid white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.5s ease-in-out;
+}
+
+.services-box:hover {
+	box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+.services-box h2 {
+	color: #007bff;
+	padding: 10px;
+	font-size: 30px;
+}
+.services-box p {
+	padding: 10px;
+}
+
+.services-box i {
+	background: #0984e3;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	margin-top: -20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .services-box {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .services-box.slide-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .services-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+	.services-box:hover {
+        box-shadow: none;
+    }
+}
+
+/* #members {
+	padding: 100px;
+	background-size: 35% 35%;
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+.member-card {
+	text-align: center;
+	padding-top: 50px;
+	width: 50%;
+	margin: auto;
+}
+
+.member-card p {
+	margin: 20px 0px;
+}
+
+.member-card h2 {
+	margin: 20px 0px;
+} */
+
+/* #work {
+	padding-top: 50px;
+	padding-bottom: 200px;
+	background: rgba(0, 0, 0, 0.03);
+	background-color: rgb(34, 34, 34);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80% 80%, 0% 100%);
+}
+
+.work-box {
+	box-shadow: 2px 3px 5px grey;
+}
+
+.work-box img {
+	width: 100%;
+	height: 100%;
+} */
+
+#contact {
+	padding: 30px 0px;
+	background-color: rgb(34, 34, 34);
+}
+
+.contact-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-left-col {
+	flex-basis: 50%;
+	padding-top: 50px;
+}
+
+.contact-right-col {
+	flex-basis: 50%;
+	max-width: 450px;
+	margin: auto;
+}
+
+.contact-right-col i {
+	font-size: 20px;
+	padding: 10px;
+	background: #74b9ff;
+	color: white;
+}
+
+.contact-right-col h1  {
+	color: #007bff;
+}
+
+.contact-right-col p {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: whitesmoke;
+}
+
+/* Add styles for social icons in mobile view */
+.social-icons-mobile {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.social-icons-mobile a {
+    color: #3498db;
+    text-decoration: none;
+	margin: 0 10px;
+}
+
+/* Adjust the icon size as needed */
+.social-icons-mobile i {
+	background: none;
+    font-size: 2em;
+}
+
+.social-icons-mobile a:nth-child(1) i {
+    color: #3b5998;
+}
+
+/* Instagram icon color */
+.social-icons-mobile a:nth-child(2) i {
+    color: #bc2a8d;
+}
+
+/* Google business icon color */
+.social-icons-mobile a:nth-child(3) i {
+	color: #4285F4;
+}
+
+/* Media query to hide social icons on screens larger than 768px */
+@media only screen and (min-width: 769px) {
+    .social-icons-mobile {
+        display: none;
+    }
+	
+    #contact h1#alsoContact {
+        display: none;
+    }
+}
+
+
+#footer {
+	background: black;
+	color: white;
+	padding: 10px;
+	display: flex;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+#footer h1 {
+	font-size: 50px;
+}
+
+#footer p {
+	font-size: 25px;
+}
+
+
+
+.form {
+
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+
+.form input[type="text"] {
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+textarea {
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.c_btn {
+	background: black;
+	color: white;
+	padding: 10px;
+	width: 50%;
+	border: none;
+}
