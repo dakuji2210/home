@@ -634,18 +634,17 @@ button:hover {
 }
 
 .services-box {
-	box-shadow: 2px 3px 5px grey;
 	padding: 10px;
 	text-align: center;
 	background-color: rgb(34, 34, 34);
 	border-radius: 10px;
 	border: 1px solid white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
 }
 
 .services-box:hover {
-	box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+	transform: scale(1.05);
 }
 
 .services-box h2 {
